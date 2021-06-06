@@ -1,4 +1,6 @@
 
+
+
 // Discuss using the dom to get a reference to our canvas.
 var canvas = document.getElementById("myCanvas");
 /**
@@ -86,12 +88,26 @@ ctx.stroke();
 /**
  * Bezier curves are used to model smooth curves that can be scaled indefinitely.
  * For example : Bezier curves can be used to represent the velocity of an object over time or
- * to smooth out the trajectory of an object in an animation or GUI.
+ * to smooth out the rigid points on a line graph.
  */
 
-// Bezier - think start point, mid point, end point
-ctx.strokeStyle = 'blue';
+/**
+ * QuadraticCurve has 1 control point between endpoints
+ */
+// Quadratic Bezier curve has 1 control point between endpoints
+ctx.strokeStyle = "green";
 ctx.beginPath();
-ctx.bezierCurveTo(175, 50, 200, 90, 225, 50);
-ctx.bezierCurveTo(225, 50, 250, 10, 275, 50);
+ctx.moveTo(200,125);
+ctx.quadraticCurveTo(225, 50, 250,125);
 ctx.stroke();
+
+/**
+ *  Cubic Bezier - has 2 control points between endpoints
+ */
+//
+ctx.strokeStyle = "purple";
+ctx.beginPath();
+ctx.moveTo(200,25);
+ctx.bezierCurveTo(225, -30, 250, 50, 275, 25);
+ctx.stroke();
+
