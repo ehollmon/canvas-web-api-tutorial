@@ -20,8 +20,8 @@ ctx.strokeRect(10,10,20, 30);
 /**
  * How-to : change stroke size and color the line
  */
-ctx.lineWidth = 10;
-ctx.strokeStyle = "blue";
+ctx.lineWidth = 4;
+ctx.strokeStyle = "rgb(30,30,114)";
 ctx.strokeRect(40, 10, 30, 30)
 
 /**
@@ -36,7 +36,7 @@ ctx.fillRect(80,10, 30,30)
  * 'rgb(255,0,0)'
  * 'rgba(255,0,0,1)'web
  */
-ctx.fillStyle = 'rgba(255,0,0)';
+ctx.fillStyle = 'rgb(10,17,68)';
 ctx.fillRect(120,10, 30,30)
 
 /**
@@ -59,7 +59,8 @@ ctx.lineTo(10,120);
 ctx.stroke();
 
 // Draw a triangle
-ctx.strokeStyle = "blue";
+ctx.strokeStyle = "yellow";
+ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.moveTo(60, 70);
 ctx.lineTo(40,100);
