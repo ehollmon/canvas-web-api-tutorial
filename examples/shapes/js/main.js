@@ -1,16 +1,14 @@
 
 // Discuss using the dom to get a reference to our canvas.
 var canvas = document.getElementById("myCanvas");
-
 /**
  * Discuss context,
  * we're going to be working with is CanvasRenderingContext2D
  * it allows us to draw in 2d on the canvas. Canvas also has a 3d rendering context.
- * Mention going to the documentation and checking out its functions on Mozillas
+ * Check out the documentation in Mozilla's docs
  *
  */
 var ctx = canvas.getContext('2d');
-
 
 /**
  * How-to : draw a regular rectangle
@@ -82,4 +80,18 @@ ctx.stroke();
  */
 ctx.beginPath();
 ctx.arc(150, 80, 10, 0, 2* Math.PI);
+ctx.stroke();
+
+
+/**
+ * Bezier curves are used to model smooth curves that can be scaled indefinitely.
+ * For example : Bezier curves can be used to represent the velocity of an object over time or
+ * to smooth out the trajectory of an object in an animation or GUI.
+ */
+
+// Bezier - think start point, mid point, end point
+ctx.strokeStyle = 'blue';
+ctx.beginPath();
+ctx.bezierCurveTo(175, 50, 200, 90, 225, 50);
+ctx.bezierCurveTo(225, 50, 250, 10, 275, 50);
 ctx.stroke();
